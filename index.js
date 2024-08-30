@@ -4,7 +4,8 @@ const bodyParser = require('body-parser');
 const app = express();
 app.use(bodyParser.json());
 
-app.post('/road2iim/webhooks', (req, res) => {
+app.post('/road2iim-server/webhooks', (req, res) => {
+    console.log('Webhook received:', req.body);
     const eventData = req.body;
     
     if (eventData && eventData.event === 'payment.captured') {
