@@ -1,0 +1,17 @@
+services:
+  # First service: A simple Nginx web server
+  road2iim:
+    build:
+      dockerfile: ./Dockerfile
+    container_name: r2i 
+    ports:
+      - "9001:8080" 
+    volumes:
+      - .:/usr/src/app
+    working_dir: /usr/src/app
+    command:
+      - "node index.js"
+    env_file: .env
+    environment:
+      - SERVER_PORT=8080
+    restart: always

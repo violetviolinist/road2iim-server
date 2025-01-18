@@ -53,8 +53,6 @@ app.post('/road2iim-server/webhooks', async (req, res) => {
     res.sendStatus(500);
 });
 
-// A route to server the static site in ./public
-
 
 
 const PORT = 80;
