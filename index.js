@@ -7,6 +7,8 @@ const resendClient = new Resend(process.env.RESEND_API_KEY);
 const app = express();
 app.use(bodyParser.json());
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.post('/road2iim-server/webhooks', async (req, res) => {
     const eventData = req.body;
     
@@ -51,7 +53,11 @@ app.post('/road2iim-server/webhooks', async (req, res) => {
     res.sendStatus(500);
 });
 
-const PORT = 8082;
+// A route to server the static site in ./public
+
+
+
+const PORT = 80;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });

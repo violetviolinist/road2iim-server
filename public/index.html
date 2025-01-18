@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <title>Road2IIM - CAT 2025 Complete Yearly Study Planner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./snipped.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .header {
+            background-color: #832cbb;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .media-content {
+            max-width: 1260px;
+            padding: 0;
+            flex-direction: column;
+        }
+        .main-content {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
+            padding: 30px;
+        }
+        h1 {
+            color: #dddbd4;
+            font-weight: 700;
+            font-size: 24px;
+        }
+        h2, h3 {
+            color: #1a5f7a;
+            font-size: 20px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #1a5f7a;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #13455a;
+        }
+        .feature-box {
+            background-color: #e6f3f8;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .price-highlight {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .video-container {
+            margin: 0 auto;
+            width: 100%;
+        }
+        .review-container {
+            margin-top: 20px;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .video-container h2, .review-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #1a5f7a;
+        }
+        .video-width-limiter {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        .review-container {
+            text-align: center;
+            width: 100%;
+        }
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .features-row {
+            justify-content: space-between;
+        }
+        .feature-item {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .is-card { 
+            display: table; 
+            background-color: #fff;
+            margin: 0 auto;
+        }
+        .is-card-circle { 
+            width: 200px; 
+            height: 200px; 
+            border-radius: 50%; 
+            padding: 50px; 
+            margin: 0 auto;
+        }
+        .is-card-content-centered { 
+            display: table-cell; 
+            vertical-align: middle; 
+            text-align: center;
+        }
+        .is-dark-text { 
+            color: #111;
+        }
+        .shadow-1 { 
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+        #style-KBwIo.style-KBwIo, #style-632vp.style-632vp, #style-pWeM1.style-pWeM1, #style-DMyah.style-DMyah {  
+            width: 100px;  
+            height: 100px;  
+            padding: 10px;  
+        }
+        .faq-container {
+            background-color: #e6f3f8;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .faq-item {
+            margin-bottom: 15px;
+        }
+        .faq-item h4 {
+            color: #1a5f7a;
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+        .faq-item p {
+            margin-left: 15px;
+            font-size: 16px;
+        }
+        
+        @media (min-width: 768px) {
+            .media-content {
+                flex-direction: row;
+            }
+            .video-container, .review-container {
+                width: 48%;
+            }
+            .feature-item {
+                width: 48%;
+            }
+            h1 {
+                font-size: 32px;
+            }
+            h2, h3 {
+                font-size: 24px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .feature-item {
+                width: 23%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Road2IIM: CAT 2025 Complete Yearly Study Planner</h1>
+            <p>Built by <span id="text-black">IIM Kozhikode</span> Students, for Serious CAT Aspirants</p>
+        </div>
+    </header>
+
+    <div class="container main-content">
+        <div class="video-container">
+            <h2>Watch Our Introduction Video</h2>
+            <div class="video-width-limiter">
+                <video width="100%" controls>
+                    <source src="images/video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <div class="container main-content" style="background: linear-gradient(to bottom right, #ffffff, #e6dbff);">
+        <h2>TRACK YOUR CHAPTERWISE CAT 2025 PREP</h2>
+        
+        <div class="feature-box">
+            <h3>Organize your 1-year prep for CAT 2025</h3>
+            <p>At <span class="price-highlight">Rs. 299 🎯</span>, get the CAT 2025 Chapterwise progress tracker with</p>
+            <p><span class="font-semibold italic">🔥 FREE mock analysis template + past years papers analysis template</span></p>
+        </div>
+
+        <div class="feature-box">
+          <h2>Read our user reviews</h2>
+          <img src="images/review.png" alt="A positive review" style="max-width: 100%; height: auto;">
+      </div>
+
+        <div class="feature-box text-center">
+            <h2>What is Road2IIM?</h2>
+            <div class="features-row flex">
+                <div class="feature-item">
+                    <div class="is-card is-card-circle is-dark-text shadow-1 style-KBwIo" id="style-KBwIo">
+                        <div class="is-card-content-centered">
+                            <svg style="width: 30px;height: 30px;" aria-hidden="true" class="e-font-icon-svg e-far-chart-bar" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M396.8 352h22.4c6.4 0 12.8-6.4 12.8-12.8V108.8c0-6.4-6.4-12.8-12.8-12.8h-22.4c-6.4 0-12.8 6.4-12.8 12.8v230.4c0 6.4 6.4 12.8 12.8 12.8zm-192 0h22.4c6.4 0 12.8-6.4 12.8-12.8V140.8c0-6.4-6.4-12.8-12.8-12.8h-22.4c-6.4 0-12.8 6.4-12.8 12.8v198.4c0 6.4 6.4 12.8 12.8 12.8zm96 0h22.4c6.4 0 12.8-6.4 12.8-12.8V204.8c0-6.4-6.4-12.8-12.8-12.8h-22.4c-6.4 0-12.8 6.4-12.8 12.8v134.4c0 6.4 6.4 12.8 12.8 12.8zM496 400H48V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v336c0 17.67 14.33 32 32 32h464c8.84 0 16-7.16 16-16v-16c0-8.84-7.16-16-16-16zm-387.2-48h22.4c6.4 0 12.8-6.4 12.8-12.8v-70.4c0-6.4-6.4-12.8-12.8-12.8h-22.4c-6.4 0-12.8 6.4-12.8 12.8v70.4c0 6.4 6.4 12.8 12.8 12.8z"></path></svg>
+                        </div>
+                    </div>
+                    <h3>Chapterwise Bifurcation</h3>
+                    <p>Clear, organized breakdowns of VARC, Quants, and LRDI to help you focus on what matters</p>
+                </div>
+                <div class="feature-item">
+                    <div class="is-card is-card-circle is-dark-text shadow-1 style-632vp" id="style-632vp">
+                        <div class="is-card-content-centered">
+                            <svg style="width: 30px;height: 30px;" aria-hidden="true" class="e-font-icon-svg e-fas-business-time" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="M496 224c-79.59 0-144 64.41-144 144s64.41 144 144 144 144-64.41 144-144-64.41-144-144-144zm64 150.29c0 5.34-4.37 9.71-9.71 9.71h-60.57c-5.34 0-9.71-4.37-9.71-9.71v-76.57c0-5.34 4.37-9.71 9.71-9.71h12.57c5.34 0 9.71 4.37 9.71 9.71V352h38.29c5.34 0 9.71 4.37 9.71 9.71v12.58zM496 192c5.4 0 10.72.33 16 .81V144c0-25.6-22.4-48-48-48h-80V48c0-25.6-22.4-48-48-48H176c-25.6 0-48 22.4-48 48v48H48c-25.6 0-48 22.4-48 48v80h395.12c28.6-20.09 63.35-32 100.88-32zM320 96H192V64h128v32zm6.82 224H208c-8.84 0-16-7.16-16-16v-48H0v144c0 25.6 22.4 48 48 48h291.43C327.1 423.96 320 396.82 320 368c0-16.66 2.48-32.72 6.82-48z"></path></svg>
+                        </div>
+                    </div>
+                    <h3>Progress Tracker</h3>
+                    <p>Keep tabs on your daily, weekly, and monthly milestones to ensure you're on the right track</p>
+                </div>
+                <div class="feature-item">
+                    <div class="is-card is-card-circle is-dark-text shadow-1 style-pWeM1" id="style-pWeM1">
+                        <div class="is-card-content-centered">
+                            <svg style="width: 30px;height: 30px;" aria-hidden="true" class="e-font-icon-svg e-fab-grav" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M301.1 212c4.4 4.4 4.4 11.9 0 16.3l-9.7 9.7c-4.4 4.7-11.9 4.7-16.6 0l-10.5-10.5c-4.4-4.7-4.4-11.9 0-16.6l9.7-9.7c4.4-4.4 11.9-4.4 16.6 0l10.5 10.8zm-30.2-19.7c3-3 3-7.8 0-10.5-2.8-3-7.5-3-10.5 0-2.8 2.8-2.8 7.5 0 10.5 3.1 2.8 7.8 2.8 10.5 0zm-26 5.3c-3 2.8-3 7.5 0 10.2 2.8 3 7.5 3 10.5 0 2.8-2.8 2.8-7.5 0-10.2-3-3-7.7-3-10.5 0zm72.5-13.3c-19.9-14.4-33.8-43.2-11.9-68.1 21.6-24.9 40.7-17.2 59.8.8 11.9 11.3 29.3 24.9 17.2 48.2-12.5 23.5-45.1 33.2-65.1 19.1zm47.7-44.5c-8.9-10-23.3 6.9-15.5 16.1 7.4 9 32.1 2.4 15.5-16.1zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-66.2 42.6c2.5-16.1-20.2-16.6-25.2-25.7-13.6-24.1-27.7-36.8-54.5-30.4 11.6-8 23.5-6.1 23.5-6.1.3-6.4 0-13-9.4-24.9 3.9-12.5.3-22.4.3-22.4 15.5-8.6 26.8-24.4 29.1-43.2 3.6-31-18.8-59.2-49.8-62.8-22.1-2.5-43.7 7.7-54.3 25.7-23.2 40.1 1.4 70.9 22.4 81.4-14.4-1.4-34.3-11.9-40.1-34.3-6.6-25.7 2.8-49.8 8.9-61.4 0 0-4.4-5.8-8-8.9 0 0-13.8 0-24.6 5.3 11.9-15.2 25.2-14.4 25.2-14.4 0-6.4-.6-14.9-3.6-21.6-5.4-11-23.8-12.9-31.7 2.8.1-.2.3-.4.4-.5-5 11.9-1.1 55.9 16.9 87.2-2.5 1.4-9.1 6.1-13 10-21.6 9.7-56.2 60.3-56.2 60.3-28.2 10.8-77.2 50.9-70.6 79.7.3 3 1.4 5.5 3 7.5-2.8 2.2-5.5 5-8.3 8.3-11.9 13.8-5.3 35.2 17.7 24.4 15.8-7.2 29.6-20.2 36.3-30.4 0 0-5.5-5-16.3-4.4 27.7-6.6 34.3-9.4 46.2-9.1 8 3.9 8-34.3 8-34.3 0-14.7-2.2-31-11.1-41.5 12.5 12.2 29.1 32.7 28 60.6-.8 18.3-15.2 23-15.2 23-9.1 16.6-43.2 65.9-30.4 106 0 0-9.7-14.9-10.2-22.1-17.4 19.4-46.5 52.3-24.6 64.5 26.6 14.7 108.8-88.6 126.2-142.3 34.6-20.8 55.4-47.3 63.9-65 22 43.5 95.3 94.5 101.1 59z"></path></svg>
+                        </div>
+                    </div>
+                    <h3>Mock Tests & Past 15 Years' Papers Tracker</h3>
+                    <p>Evaluate your performance with a dedicated space to track your mock tests and analyze past 15 years' CAT papers</p>
+                </div>
+                <div class="feature-item">
+                    <div class="is-card is-card-circle is-dark-text shadow-1 style-DMyah" id="style-DMyah">
+                        <div class="is-card-content-centered">
+                            <svg style="width: 30px;height: 30px;" aria-hidden="true" class="e-font-icon-svg e-fas-project-diagram" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="M384 320H256c-17.67 0-32 14.33-32 32v128c0 17.67 14.33 32 32 32h128c17.67 0 32-14.33 32-32V352c0-17.67-14.33-32-32-32zM192 32c0-17.67-14.33-32-32-32H32C14.33 0 0 14.33 0 32v128c0 17.67 14.33 32 32 32h95.72l73.16 128.04C211.98 300.98 232.4 288 256 288h.28L192 175.51V128h224V64H192V32zM608 0H480c-17.67 0-32 14.33-32 32v128c0 17.67 14.33 32 32 32h128c17.67 0 32-14.33 32-32V32c0-17.67-14.33-32-32-32z"></path></svg>
+                        </div>
+                    </div>
+                    <h3>Mock Analysis Template</h3>
+                    <p>Detailed templates to analyze your mocks and identify areas for improvement, helping you fine-tune your strategy as D-Day approaches</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+          <p><span class="font-semibold">Start Your Journey to IIM NOW!</span></p>
+          <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_OogdNeB5qxzkpE" async> </script> </form>
+          <p style="color: red; margin-top: 10px; font-weight: bold; background-color: yellow;">IMPORTANT: Please ensure the payments screen remains open. After completing the payment, click on "Done" to receive your digital product. For assistance please contact on Whatsapp : <a href="https://chat.whatsapp.com/DiDxFBkhKPWLu0zfUJ4eRe">https://chat.whatsapp.com/DiDxFBkhKPWLu0zfUJ4eRe</a></p>
+        </div>
+
+        <h3>Why Should You Trust Road2IIM? 🤔</h3>
+        <p>Hi, we're the creators of Road2IIM – a group of IIM Kozhikode students who have been exactly where you are right now. We know the struggles, the stress, and the sleepless nights. That's why we've put together this planner, customized specifically for CAT 2025, to help you visualize your progress and stay motivated during the last leg of your prep.</p>
+
+        <h3>What You'll Gain with Road2IIM: 🤷‍♂️🤷‍♂️</h3>
+        <ul>
+            <li>Clarity in Preparation: No more confusion. With our chapterwise bifurcation, you'll know exactly what to study and when.</li>
+            <li>Confidence in Progress: Track your improvement with our intuitive progress tracker and feel confident as you see your growth in real-time.</li>
+            <li>Mastery Over Mocks: Use our mock analysis template to gain deep insights into your performance and sharpen your strategy.</li>
+            <li>Competitive Edge: Stand out from the competition with a meticulously planned approach that has been fine-tuned by those who've already made it to the IIMs.</li>
+        </ul>
+
+        <h3>This Planner is a MUST if...💯</h3>
+        <ul>
+            <li>You're serious about cracking CAT 2025.</li>
+            <li>You want a clear, structured approach to your preparation.</li>
+            <li>You're looking to maximize your scores in the final days.</li>
+            <li>You're tired of generic planners that don't cater to your specific needs.</li>
+        </ul>
+
+        <h3>Frequently Asked Questions 🤔</h3>
+        <div class="faq-container">
+            <div class="faq-item">
+                <h4>Who created Road2IIM?</h4>
+                <p>Road2IIM is designed by a team of IIM Kozhikode students who have successfully navigated the CAT and want to help you do the same.</p>
+            </div>
+            <div class="faq-item">
+                <h4>What does Road2IIM include?</h4>
+                <p>It includes a chapterwise bifurcation for all sections, a progress tracker, mock tests and past 15 years' papers tracker, and a mock analysis template.</p>
+            </div>
+            <div class="faq-item">
+                <h4>How will Road2IIM benefit me?</h4>
+                <p>It provides a structured approach to your preparation, helping you track progress, identify weaknesses, and optimize your study plan for maximum results.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Is this planner customized for CAT 2025?</h4>
+                <p>Yes, Road2IIM is specially tailored to meet the demands of CAT 2025 aspirants.</p>
+            </div>
+        </div>
+        <style>
+            .faq-container {
+                background-color: #e6f3f8;
+                border-radius: 8px;
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+            .faq-item {
+                margin-bottom: 15px;
+            }
+            .faq-item h4 {
+                color: #1a5f7a;
+                margin-bottom: 5px;
+            }
+            .faq-item p {
+                margin-left: 15px;
+            }
+        </style>
+
+        <div class="text-center">
+            <p><span class="font-semibold">Why Wait? 🕣 Start Your Journey to IIM NOW!</span></p>
+            <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_OogdNeB5qxzkpE" async> </script> </form>
+            <p style="color: red; margin-top: 10px; font-weight: bold; background-color: yellow;">IMPORTANT: Please ensure the payments screen remains open. After completing the payment, click on "Done" to receive your digital product. For assistance please contact on Whatsapp : <a href="https://chat.whatsapp.com/DiDxFBkhKPWLu0zfUJ4eRe">https://chat.whatsapp.com/DiDxFBkhKPWLu0zfUJ4eRe</a></p>
+        </div>
+    </div>
+</body>
+</html>
